@@ -1,0 +1,7 @@
+node_modules/
+package.json
+package-lock.json
+screenshot.js
+screenshot.png
+CLAUDE.md
+example (1).png

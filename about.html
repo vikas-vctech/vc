@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — ValuConsult</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'vc-blue': '#008aff', 'vc-dark': '#0d1828', 'vc-navy': '#1a2a3a' } } }
+    }
+  </script>
+  <style>body { font-family: Inter, Arial, sans-serif; color: #313131; }</style>
+</head>
+<body class="bg-white">
+
+  <!-- Nav -->
+  <header class="bg-vc-dark text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded flex items-center justify-center flex-shrink-0" style="background:#008aff;">
+          <span class="text-white font-black text-sm">VC</span>
+        </div>
+        <span class="text-white font-bold text-lg">Valu<span style="color:#008aff;">Consult</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Home</a>
+        <a href="about.html" class="text-white font-semibold text-sm">About</a>
+        <a href="services.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Services</a>
+        <a href="case-studies.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="hidden sm:inline-block bg-vc-blue text-white text-sm font-semibold px-5 py-2 rounded hover:bg-blue-600 transition">Get Started</a>
+        <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden p-2 rounded hover:bg-white/10 transition" aria-label="Open menu">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mob-nav" class="hidden md:hidden border-t border-white/10 bg-vc-dark">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col">
+        <a href="index.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Home</a>
+        <a href="about.html" class="text-white font-semibold py-3 text-sm border-b border-white/5">About</a>
+        <a href="services.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Services</a>
+        <a href="case-studies.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white py-3 text-sm transition">Contact Us</a>
+        <a href="contact.html" class="mt-3 mb-2 bg-vc-blue text-white px-4 py-2.5 rounded text-sm font-semibold text-center hover:bg-blue-600 transition">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative overflow-hidden" style="background:#0d1828; min-height:280px;">
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,10,25,0.97) 0%,rgba(10,20,50,0.8) 55%,rgba(15,30,70,0.4) 100%);"></div>
+    <div class="absolute right-0 top-0 w-3/5 h-full" style="background:linear-gradient(160deg,#0a1e40 0%,#0f2d5e 30%,#1a4080 55%,#0d244a 80%,#071828 100%);"></div>
+    <div class="absolute right-0 top-0 w-3/5 h-full opacity-20" style="background-image:radial-gradient(ellipse at 70% 50%,rgba(0,138,255,0.4) 0%,transparent 60%);"></div>
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=280&fit=crop&crop=entropy&auto=format&q=70" alt="" class="absolute right-0 top-0 w-3/5 h-full object-cover opacity-20" />
+    <div class="relative max-w-7xl mx-auto px-6 flex flex-col justify-center" style="min-height:280px;">
+      <p class="text-blue-400 text-xs uppercase tracking-widest mb-2 font-semibold">Who We Are</p>
+      <h1 class="text-white font-extrabold text-4xl mb-3" style="letter-spacing:-0.5px;">About ValuConsult</h1>
+      <p class="text-gray-300 text-sm max-w-lg leading-relaxed">With over two decades of experience in regional and global markets, ValuConsult is one of the leading management consultancy firms, trusted by Big 4s, PE firms, investment banks, and corporations.</p>
+    </div>
+  </section>
+
+  <!-- Mission & Who We Are -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Mission</p>
+          <h2 class="text-gray-800 font-bold text-3xl leading-tight mb-5">"Foster better business decisions through bespoke Consulting, Strategy &amp; Financial Research"</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">ValuConsult provides customized research and consulting solutions associated with niche and emerging products. Our access to Expert Panels combined with our structured thinking and ability to identify insights amongst the plethora of data and noise — in a time-bound manner — enables us to deliver winning strategies to our clients.</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">We specialize in researching niche products, services and solutions across emerging and developed markets. Each of our consultants specializes in specific functional and industry domains with a minimum of 10+ years of experience.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-blue-50 rounded p-4">
+              <span class="text-3xl font-extrabold" style="color:#008aff;">250+</span>
+              <p class="text-gray-600 text-xs mt-1">Projects Executed</p>
+            </div>
+            <div class="bg-blue-50 rounded p-4">
+              <span class="text-3xl font-extrabold" style="color:#008aff;">20+</span>
+              <p class="text-gray-600 text-xs mt-1">Expert Consultants</p>
+            </div>
+            <div class="bg-blue-50 rounded p-4">
+              <span class="text-3xl font-extrabold" style="color:#008aff;">10+</span>
+              <p class="text-gray-600 text-xs mt-1">Thematic Reports</p>
+            </div>
+            <div class="bg-blue-50 rounded p-4">
+              <span class="text-3xl font-extrabold" style="color:#008aff;">2 of 4</span>
+              <p class="text-gray-600 text-xs mt-1">Big 4 Firms Are Clients</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=440&fit=crop&crop=entropy&auto=format&q=80" alt="ValuConsult team" class="w-full rounded-lg shadow-lg object-cover" style="height:400px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Four Pillars -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2 text-center">A Holistic Approach</p>
+      <h2 class="text-gray-800 font-bold text-2xl text-center mb-10">What Sets Us Apart</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Domain Expertise</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Deep operational expertise in eight key industries. Empanelment with globally leading Expert Networks plus a proprietary SME network.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">"Next Best Action" Approach</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Consulting frameworks applied to determine actionable insights. On-the-ground intelligence through strong primary research expertise and expert interviews.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Delivering Value</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Quality parallel to Big 4 consultants at a quarter of the cost. Each dollar you invest generates above-average returns through focused, expert delivery.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Experienced Consultants</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Each of our 20+ consultants have 10+ years of expertise across domains and functions. CA, MBA from leading institutes. Preferred partner for Big 4s.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why ValuConsult — detailed -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&crop=entropy&auto=format&q=80" alt="Data analytics" class="w-full rounded-lg shadow-lg object-cover" style="height:380px;" />
+        </div>
+        <div>
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-3">Why ValuConsult</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-5">Making Life Easier for Clients — Quality, Economy &amp; Flexibility</h2>
+          <ul class="space-y-4">
+            <li class="flex gap-3 items-start">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-800">Heavy lift &gt;90% of your project</strong> with minimal notice — seamlessly handling the bulk of research and analysis.</p>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-800">Primary research excellence</strong> — extracting intriguing, operational and recent industry / company specific information from industry experts.</p>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-800">Expertise cutting across sectors</strong> including Industry 4.0 and highly flexible, nimble-footed approach suitable for complex projects.</p>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-800">Round the clock support</strong> to meet stringent deadlines. Trustworthy quality at a fraction of overall project cost.</p>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed"><strong class="text-gray-800">Wide experienced team</strong> — preferred outsourcing partner for Big 4s and leading consultancies globally.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Databases -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2 text-center">Data Infrastructure</p>
+      <h2 class="text-gray-800 font-bold text-2xl text-center mb-4">Subscribed Research Databases</h2>
+      <p class="text-center text-gray-500 text-sm max-w-xl mx-auto mb-10">We maintain active subscriptions to leading global research and intelligence platforms, ensuring our clients get access to the most current and comprehensive data.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded flex items-center justify-center" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800">LexisNexis</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Business intelligence platform including content from 33,000 news, data and information sources from 200 countries and 32 languages.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded flex items-center justify-center" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800">Euromonitor</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Industry intelligence provider with access to consumer goods and retail industries globally — deep market data and forecasting.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded flex items-center justify-center" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800">Statista</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Statistics on 80,000+ different topics from more than 22,500 sources — enabling rapid, data-backed market sizing and benchmarking.</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-400 text-xs mt-6">For any other report requirement not under VC subscription, we can help source the report at negotiated rates from the supplier.</p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2 text-center">Leadership</p>
+      <h2 class="text-gray-800 font-bold text-2xl text-center mb-10">Meet the Directors</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Vikas -->
+        <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <img src="Vikas.png" alt="Vikas Yesaji" class="w-24 h-24 rounded-full object-cover object-top border-4 border-white shadow-md" style="image-rendering:auto;" />
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-800 text-lg">Vikas Yesaji</h3>
+            <p class="text-vc-blue text-sm font-semibold mb-3">Director</p>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Seasoned consulting and research professional with deep expertise in strategy, financial research and market intelligence across regional and global markets.</p>
+            <div class="flex flex-col gap-1 items-center">
+              <a href="mailto:vikas@valuconsult.com" class="text-sm flex items-center gap-2 hover:text-vc-blue transition" style="color:#008aff;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                vikas@valuconsult.com
+              </a>
+              <a href="tel:+919892992001" class="text-sm flex items-center gap-2 text-gray-500 hover:text-vc-blue transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +91 98929 92001
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Gop -->
+        <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <img src="Gop.png" alt="Gop Shah" class="w-24 h-24 rounded-full object-cover object-top border-4 border-white shadow-md" style="image-rendering:auto;" />
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-800 text-lg">Gop Shah</h3>
+            <p class="text-vc-blue text-sm font-semibold mb-3">Director</p>
+            <p class="text-gray-500 text-sm leading-relaxed mb-4">Expert in business research, competitive intelligence and financial advisory with extensive experience serving Big 4 firms, investment banks and private equity across global markets.</p>
+            <div class="flex flex-col gap-1 items-center">
+              <a href="mailto:gop@valuconsult.com" class="text-sm flex items-center gap-2 hover:text-vc-blue transition" style="color:#008aff;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                gop@valuconsult.com
+              </a>
+              <a href="tel:+919987100860" class="text-sm flex items-center gap-2 text-gray-500 hover:text-vc-blue transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +91 99871 00860
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14" style="background:linear-gradient(135deg,#0d1828 0%,#0f2d5e 50%,#1a4080 100%);">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-white font-bold text-2xl mb-3">Avail Our One-Week Free Pilot Offer</h2>
+      <p class="text-blue-200 text-sm mb-6">Experience our research quality first-hand. No commitment required. T&amp;C apply.</p>
+      <a href="contact.html" class="inline-block bg-vc-blue text-white font-semibold px-10 py-3 rounded hover:bg-blue-600 transition text-sm">Get Started Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 pt-10 pb-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded flex items-center justify-center" style="background:#008aff;"><span class="text-white font-black text-xs">VC</span></div>
+            <span class="text-white font-bold">Valu<span style="color:#008aff;">Consult</span></span>
+          </div>
+          <p class="text-xs leading-relaxed mb-3">Foster better business decisions through bespoke Consulting, Strategy and Financial Research.</p>
+          <p class="text-xs text-gray-500">Mumbai | Indore | Vadodara, India</p>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Services</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="services.html" class="hover:text-white transition">Business Research</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Financial Research</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Economic Research</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Expert Network</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Company</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+            <li><a href="insights.html" class="hover:text-white transition">Insights</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Contact</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="mailto:vikas@valuconsult.com" class="hover:text-white transition">vikas@valuconsult.com</a></li>
+            <li><a href="mailto:gop@valuconsult.com" class="hover:text-white transition">gop@valuconsult.com</a></li>
+            <li><a href="https://linkedin.com/company/value-consult-advisory" class="hover:text-white transition">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 flex flex-col md:flex-row items-center justify-between gap-2">
+        <p class="text-xs">© 2024 ValuConsult. All rights reserved.</p>
+        <p class="text-xs">Mumbai | Indore | Vadodara, India</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

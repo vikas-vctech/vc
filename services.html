@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — ValuConsult</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'vc-blue': '#008aff', 'vc-dark': '#0d1828', 'vc-navy': '#1a2a3a' } } }
+    }
+  </script>
+  <style>body { font-family: Inter, Arial, sans-serif; color: #313131; }
+  .service-tag { display:inline-block; background:#e8f4ff; color:#008aff; font-size:11px; font-weight:600; padding:2px 8px; border-radius:3px; margin-bottom:8px; }</style>
+</head>
+<body class="bg-white">
+
+  <!-- Nav -->
+  <header class="bg-vc-dark text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded flex items-center justify-center flex-shrink-0" style="background:#008aff;"><span class="text-white font-black text-sm">VC</span></div>
+        <span class="text-white font-bold text-lg">Valu<span style="color:#008aff;">Consult</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-white font-medium transition text-sm">About</a>
+        <a href="services.html" class="text-white font-semibold text-sm">Services</a>
+        <a href="case-studies.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="hidden sm:inline-block bg-vc-blue text-white text-sm font-semibold px-5 py-2 rounded hover:bg-blue-600 transition">Get Started</a>
+        <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden p-2 rounded hover:bg-white/10 transition" aria-label="Open menu">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mob-nav" class="hidden md:hidden border-t border-white/10 bg-vc-dark">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col">
+        <a href="index.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">About</a>
+        <a href="services.html" class="text-white font-semibold py-3 text-sm border-b border-white/5">Services</a>
+        <a href="case-studies.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white py-3 text-sm transition">Contact Us</a>
+        <a href="contact.html" class="mt-3 mb-2 bg-vc-blue text-white px-4 py-2.5 rounded text-sm font-semibold text-center hover:bg-blue-600 transition">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative overflow-hidden" style="background:#0d1828; min-height:260px;">
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,10,25,0.97) 0%,rgba(10,20,50,0.8) 55%,rgba(15,30,70,0.35) 100%);"></div>
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=260&fit=crop&crop=entropy&auto=format&q=70" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="relative max-w-7xl mx-auto px-6 flex flex-col justify-center" style="min-height:260px;">
+      <p class="text-blue-400 text-xs uppercase tracking-widest mb-2 font-semibold">What We Do</p>
+      <h1 class="text-white font-extrabold text-4xl mb-3" style="letter-spacing:-0.5px;">Our Services</h1>
+      <p class="text-gray-300 text-sm max-w-lg leading-relaxed">A comprehensive suite of research and consulting services tailored for corporations, consultancies, investment banks, PE firms, and start-ups across regional and global markets.</p>
+    </div>
+  </section>
+
+  <!-- Services overview tabs / anchors -->
+  <nav class="bg-white border-b border-gray-200 sticky top-14 z-40">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex gap-6 overflow-x-auto py-3">
+        <a href="#business-research" class="text-sm font-semibold whitespace-nowrap pb-1 border-b-2 transition" style="color:#008aff; border-color:#008aff;">Business Research</a>
+        <a href="#financial-research" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Financial Research</a>
+        <a href="#economic-research" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Economic Research</a>
+        <a href="#market-research" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Market Research</a>
+        <a href="#content-data" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Content &amp; Data</a>
+        <a href="#transaction" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Transaction Advisory</a>
+        <a href="#procurement" class="text-sm font-medium text-gray-500 hover:text-gray-800 whitespace-nowrap pb-1 border-b-2 border-transparent transition">Procurement</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Business Research & Strategy -->
+  <section id="business-research" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center mb-12">
+        <div>
+          <span class="service-tag">Business Research &amp; Strategy</span>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Industry Research, Market Intelligence &amp; Strategic Consulting</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Data is everywhere today. Developing relevant and transferable knowledge about the industry, competitors, and customers is one of the biggest challenges organisations face. We provide a complete array of business research services to tackle such challenges.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Our consultants bring deep domain expertise, applying proven consulting frameworks to produce actionable insights backed by on-the-ground intelligence and extensive primary research.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=360&fit=crop&crop=entropy&auto=format&q=80" alt="Business Research" class="w-full rounded-lg shadow-md object-cover" style="height:300px;" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Market Entry Strategy
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Macro-economic environment, industry structure, regulatory complexity and competitive landscape analysis. We focus on manifesting industry potential, gaps and weaknesses, answering: Who are the customers? What is the pricing structure? What is the expected cost structure?</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Opportunity Assessment &amp; GTM Strategy
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Deep-dive industry analysis to identify potential and risks, screen and filter companies matching client criteria. Go-to-Market strategy covering pricing, distribution channels, and competitive positioning.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Industry Research
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Customized industry research across regions and sectors. Interpreting and reconciling conflicting information across sources, providing in-depth analysis using PESTEL and other widely accepted frameworks. All reports tailored to customer requirements.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Feasibility Studies
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Detail-oriented feasibility analysis of business ventures or expansion plans. Market analysis, demand analysis, financial analysis, and strategy analysis. Growth plan preparation with recommendations and risk identification.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Competitive Intelligence
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Continuous and sporadic support tracking competitors — investment activity, product launches, personnel changes, technology adoption, financial results. Benchmarking financials, products, services and technologies. Advanced competition trackers and executive profiles.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+            <span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>
+            Technology Benchmarking &amp; Innovation Tracking
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Scanning secondary research sources, academic publications, patent filings and company reports to identify leading technological breakthroughs. Expert interviews to gain insight into innovation and future trends. Identifying strategy, expansion plans and product launches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Financial Research -->
+  <section id="financial-research" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center mb-12">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=360&fit=crop&crop=entropy&auto=format&q=80" alt="Financial Research" class="w-full rounded-lg shadow-md object-cover" style="height:300px;" />
+        <div>
+          <span class="service-tag">Financial Research</span>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Valuation, Financial Modelling &amp; Investor Intelligence</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Our financial research services are tailored for investment banks, private equity firms, capital market companies, and corporate strategy teams. We deliver rigorous, data-backed financial analysis that supports critical investment and strategic decisions.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">From initiating coverage reports and sector primers to pitch book support and due diligence, our team brings financial discipline and industry depth to every engagement.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Valuation Reports</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Comprehensive company and asset valuation using DCF, comparable company analysis, precedent transactions, and other methodologies appropriate to the asset class and sector.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Financial Modelling</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Bespoke financial models for businesses, projects, and investment targets. Three-statement models, LBO models, merger models, and scenario analysis with sensitivity tables.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Sector Primers</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Comprehensive overview of an industry — market structure, key players, value chain, financials, regulatory landscape, and investment themes — designed for investors and strategy teams.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Initiating Coverage Reports</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Detailed equity research reports covering company background, financials, competitive positioning, growth drivers, risks, and valuation — suitable for initiation of coverage by equity research teams.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Pitch Book &amp; Investor Presentations</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">End-to-end pitch book support for investment banks and PE firms. Investor presentations for start-ups and growth companies seeking capital, covering market opportunity, business model, financials, and investment thesis.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+          <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2"><span class="w-1.5 h-5 rounded" style="background:#008aff; display:inline-block;"></span>Due Diligence Support</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Commercial and financial due diligence support for M&amp;A and PE transactions — market assessment, competitive landscape, customer analysis, management assessment, and risk identification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Economic Research -->
+  <section id="economic-research" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center mb-12">
+        <div>
+          <span class="service-tag">Economic Research</span>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Macro Analysis, Country Assessments &amp; Policy Intelligence</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">We provide in-depth, comprehensive and regular analysis of macro-economic indicators, geo-political issues, latest developments and key economic issues across regions and countries.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Our economic research capabilities support FX and interest rate strategy, regulatory framework assessments, and thematic studies on the economic forces shaping industries.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=360&fit=crop&crop=entropy&auto=format&q=80" alt="Economic Research" class="w-full rounded-lg shadow-md object-cover" style="height:300px;" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2">Country Reports</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Analyzing macro and micro-economic environment, economic indicators, and growth prospects of specific countries for investment and market entry decisions.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2">Policy Analysis &amp; Benchmarking</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Assessment of regulatory frameworks, policy benchmarking across jurisdictions, and strategic recommendations aligned with policy directions and government priorities.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2">Thematic Studies</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Deep-dive thematic research on economic issues — digital transformation, green economy, demographic shifts, urbanization, and other macro trends reshaping industries.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+          <h3 class="font-bold text-gray-800 mb-2">FX &amp; Rate Strategy Support</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Support for FX and interest rate product strategies, macro forecasting, and advanced economic trackers delivered as weekly or monthly strategic reports and newsletters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Market Research -->
+  <section id="market-research" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center mb-12">
+        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600&h=360&fit=crop&crop=entropy&auto=format&q=80" alt="Market Research" class="w-full rounded-lg shadow-md object-cover" style="height:300px;" />
+        <div>
+          <span class="service-tag">Market Research</span>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Primary Research, Surveys &amp; Expert Interviews</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Our market research capabilities span primary and secondary research methodologies. We conduct B2C and B2B surveys, in-depth interviews (IDIs), expert interviews, channel checks, and focus group discussions across geographies.</p>
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="bg-white rounded p-3 border border-gray-200 text-sm text-gray-600"><strong class="block text-gray-800 text-xs mb-1">B2C / B2B Surveys</strong>Online, CATI, CAPI, IDIs</div>
+            <div class="bg-white rounded p-3 border border-gray-200 text-sm text-gray-600"><strong class="block text-gray-800 text-xs mb-1">Expert / SME Interviews</strong>Primary intelligence from industry experts</div>
+            <div class="bg-white rounded p-3 border border-gray-200 text-sm text-gray-600"><strong class="block text-gray-800 text-xs mb-1">Channel Checks</strong>On-ground competitive and channel intelligence</div>
+            <div class="bg-white rounded p-3 border border-gray-200 text-sm text-gray-600"><strong class="block text-gray-800 text-xs mb-1">Customer Segmentation</strong>Profiling and insights by segment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Content Development & Data -->
+  <section id="content-data" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <span class="service-tag">Content &amp; Data Intelligence</span>
+      <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Content Development, Knowledge Management &amp; Data Services</h2>
+      <p class="text-gray-600 text-sm leading-relaxed mb-8 max-w-2xl">We help corporations, governments, consulting and IB firms in the development of reports, dashboards, and proprietary databases tailored to their specific needs.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">Thought Leadership Papers</h3>
+          <p class="text-gray-500 text-sm">Industry thought leadership papers, sector primers, infographics, newsletters and whitepapers positioning your firm as the authority in your domain.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">B2B Sales Support</h3>
+          <p class="text-gray-500 text-sm">Target market identification, lead generation &amp; campaign management, proposals and RFP responses, prospect profiling and key accounts tracking.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">Data Visualization &amp; Reporting</h3>
+          <p class="text-gray-500 text-sm">Custom dashboards, MIS reporting, data visualization, illustrative datasets — sector-specific databases with product features, pricing, and KPI tracking (e.g. footfalls &amp; conversion rates for retail).</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">Corporate Presentation Support</h3>
+          <p class="text-gray-500 text-sm">Editorial and presentation support, dashboards/MIS, translations, database management, and custom database generation &amp; maintenance.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">Enterprise &amp; People Profiles</h3>
+          <p class="text-gray-500 text-sm">Corporate information, company profiles, corporate actions, business financials, key management profiles, and prospect identification for meeting notes.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-sm transition">
+          <h3 class="font-bold text-gray-800 mb-2">Financial Markets Data</h3>
+          <p class="text-gray-500 text-sm">Equity, derivatives data tracking; projects and real estate data (existing and upcoming); capex sector-specific operational KPIs tracking and reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Transaction Advisory -->
+  <section id="transaction" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="service-tag">Transaction Advisory</span>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">M&amp;A Support, Business Plans &amp; Investor Pitch Services</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">Our transaction advisory services are tailored for start-ups and investment banking firms. We provide end-to-end services — from business and market research to company valuation — to support promising start-ups and deal teams.</p>
+          <ul class="space-y-3">
+            <li class="flex gap-3 items-start"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;"><svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div><p class="text-gray-600 text-sm">Target Identification, Screening &amp; Profiling for M&amp;A and PE mandates</p></li>
+            <li class="flex gap-3 items-start"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;"><svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div><p class="text-gray-600 text-sm">Business Plan development with market research and financial projections</p></li>
+            <li class="flex gap-3 items-start"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;"><svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div><p class="text-gray-600 text-sm">Industry Due Diligence for PE and strategic acquirers</p></li>
+            <li class="flex gap-3 items-start"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;"><svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div><p class="text-gray-600 text-sm">Valuation &amp; Modeling — DCF, comparables, LBO, and other methodologies</p></li>
+            <li class="flex gap-3 items-start"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#008aff;"><svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div><p class="text-gray-600 text-sm">Investor Presentations and pitch book support for fund-raise and M&amp;A roadshows</p></li>
+          </ul>
+        </div>
+        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=360&fit=crop&crop=entropy&auto=format&q=80" alt="Transaction Advisory" class="w-full rounded-lg shadow-md object-cover" style="height:360px;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Procurement Research -->
+  <section id="procurement" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <span class="service-tag">Procurement Research</span>
+      <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Category Management, Spend Analysis &amp; Supplier Intelligence</h2>
+      <p class="text-gray-600 text-sm leading-relaxed mb-8 max-w-2xl">Supporting procurement and supply chain teams with data-driven category strategies, cost benchmarking, and supplier intelligence to optimize sourcing decisions.</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 text-sm mb-1">Category Management</h3>
+          <p class="text-gray-500 text-xs">Category strategies and should-cost analysis for strategic sourcing decisions.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 text-sm mb-1">Spend Analysis</h3>
+          <p class="text-gray-500 text-xs">Structured analysis of procurement spend to identify savings and optimization opportunities.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 text-sm mb-1">Low Cost Country Sourcing</h3>
+          <p class="text-gray-500 text-xs">Identifying and evaluating low-cost country sourcing opportunities across Asia, Eastern Europe and LATAM.</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-5 border border-gray-100 text-center">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3" style="background:#e8f4ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" style="color:#008aff;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 text-sm mb-1">Supplier Analysis</h3>
+          <p class="text-gray-500 text-xs">Comprehensive supplier profiling, capability assessment, risk analysis, and competitive benchmarking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14" style="background:linear-gradient(135deg,#0d1828 0%,#0f2d5e 50%,#1a4080 100%);">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-white font-bold text-2xl mb-3">Ready to Get Started?</h2>
+      <p class="text-blue-200 text-sm mb-6">Avail our one-week free pilot offer — experience our quality with no commitment. T&amp;C apply.</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="contact.html" class="bg-vc-blue text-white font-semibold px-8 py-3 rounded hover:bg-blue-600 transition text-sm">Contact Us</a>
+        <a href="case-studies.html" class="border border-blue-400 text-blue-200 font-semibold px-8 py-3 rounded hover:bg-blue-900 transition text-sm">View Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 pt-10 pb-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded flex items-center justify-center" style="background:#008aff;"><span class="text-white font-black text-xs">VC</span></div>
+            <span class="text-white font-bold">Valu<span style="color:#008aff;">Consult</span></span>
+          </div>
+          <p class="text-xs leading-relaxed">Foster better business decisions through bespoke Consulting, Strategy and Financial Research.</p>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Services</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#business-research" class="hover:text-white transition">Business Research</a></li>
+            <li><a href="#financial-research" class="hover:text-white transition">Financial Research</a></li>
+            <li><a href="#economic-research" class="hover:text-white transition">Economic Research</a></li>
+            <li><a href="#market-research" class="hover:text-white transition">Market Research</a></li>
+            <li><a href="#transaction" class="hover:text-white transition">Transaction Advisory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Company</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+            <li><a href="insights.html" class="hover:text-white transition">Insights</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Contact</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="mailto:vikas@valuconsult.com" class="hover:text-white transition">vikas@valuconsult.com</a></li>
+            <li><a href="mailto:gop@valuconsult.com" class="hover:text-white transition">gop@valuconsult.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 flex flex-col md:flex-row items-center justify-between gap-2">
+        <p class="text-xs">© 2024 ValuConsult. All rights reserved.</p>
+        <p class="text-xs">Mumbai | Indore | Vadodara, India</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

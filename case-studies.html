@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies — ValuConsult</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'vc-blue': '#008aff', 'vc-dark': '#0d1828', 'vc-navy': '#1a2a3a' } } }
+    }
+  </script>
+  <style>body { font-family: Inter, Arial, sans-serif; color: #313131; }</style>
+</head>
+<body class="bg-white">
+
+  <!-- Nav -->
+  <header class="bg-vc-dark text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded flex items-center justify-center flex-shrink-0" style="background:#008aff;"><span class="text-white font-black text-sm">VC</span></div>
+        <span class="text-white font-bold text-lg">Valu<span style="color:#008aff;">Consult</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-white font-medium transition text-sm">About</a>
+        <a href="services.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Services</a>
+        <a href="case-studies.html" class="text-white font-semibold text-sm">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white font-medium transition text-sm">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="hidden sm:inline-block bg-vc-blue text-white text-sm font-semibold px-5 py-2 rounded hover:bg-blue-600 transition">Get Started</a>
+        <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden p-2 rounded hover:bg-white/10 transition" aria-label="Open menu">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mob-nav" class="hidden md:hidden border-t border-white/10 bg-vc-dark">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col">
+        <a href="index.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">About</a>
+        <a href="services.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Services</a>
+        <a href="case-studies.html" class="text-white font-semibold py-3 text-sm border-b border-white/5">Case Studies</a>
+        <a href="insights.html" class="text-gray-300 hover:text-white py-3 text-sm border-b border-white/5 transition">Insights</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white py-3 text-sm transition">Contact Us</a>
+        <a href="contact.html" class="mt-3 mb-2 bg-vc-blue text-white px-4 py-2.5 rounded text-sm font-semibold text-center hover:bg-blue-600 transition">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="relative overflow-hidden" style="background:#0d1828; min-height:260px;">
+    <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(5,10,25,0.97) 0%,rgba(10,20,50,0.8) 55%,rgba(15,30,70,0.35) 100%);"></div>
+    <img src="https://images.unsplash.com/photo-1504607798333-52a30db54a5d?w=1200&h=260&fit=crop&crop=entropy&auto=format&q=70" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="relative max-w-7xl mx-auto px-6 flex flex-col justify-center" style="min-height:260px;">
+      <p class="text-blue-400 text-xs uppercase tracking-widest mb-2 font-semibold">Client Work</p>
+      <h1 class="text-white font-extrabold text-4xl mb-3" style="letter-spacing:-0.5px;">Case Studies</h1>
+      <p class="text-gray-300 text-sm max-w-lg leading-relaxed">Real-world engagements across industries and geographies — demonstrating how ValuConsult delivers measurable outcomes for our clients.</p>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="bg-vc-navy text-white py-5">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-10">
+      <div class="text-center"><span class="text-2xl font-extrabold" style="color:#008aff;">250+</span><p class="text-xs text-gray-400 mt-0.5">Projects Delivered</p></div>
+      <div class="text-center"><span class="text-2xl font-extrabold" style="color:#008aff;">8</span><p class="text-xs text-gray-400 mt-0.5">Key Industries</p></div>
+      <div class="text-center"><span class="text-2xl font-extrabold" style="color:#008aff;">Global</span><p class="text-xs text-gray-400 mt-0.5">ME, Asia, Europe, US</p></div>
+      <div class="text-center"><span class="text-2xl font-extrabold" style="color:#008aff;">Big 4</span><p class="text-xs text-gray-400 mt-0.5">Trusted Partner</p></div>
+    </div>
+  </section>
+
+  <!-- Case Study 1: Aluminum Scrap UAE -->
+  <section class="bg-white py-16 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Aluminum Scrap UAE" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Market Research</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Feasibility Study</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">UAE / Middle East</span>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 01</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Market &amp; Financial Feasibility Study — Aluminum Scrap, UAE</h2>
+          <div class="space-y-5">
+            <div class="bg-gray-50 rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Conduct a comprehensive market and financial feasibility study for aluminum scrap operations in the UAE, including competitive assessment and market sizing.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Scope of Work</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Expert Identification and Management — contracted a subject matter expert with over 40 years of experience in the aluminum and metal scrap industry</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Conducted 8+ market interviews with competitors including Sharif Metals International, Lucky Alloys, Emirates Recycling, Al Waha Recycling, Sun Alloys and more</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Market assessment using a combined approach — secondary research, primary interviews, and financial modeling — with 100% governance by VC</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Financial feasibility model including revenue projections, cost structure, capex requirements, and investment returns</li>
+              </ul>
+            </div>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="text-center bg-blue-50 rounded p-3"><span class="text-xl font-extrabold" style="color:#008aff;">8+</span><p class="text-xs text-gray-500 mt-1">Market Interviews</p></div>
+              <div class="text-center bg-blue-50 rounded p-3"><span class="text-xl font-extrabold" style="color:#008aff;">1</span><p class="text-xs text-gray-500 mt-1">40yr Industry SME</p></div>
+              <div class="text-center bg-blue-50 rounded p-3"><span class="text-xl font-extrabold" style="color:#008aff;">100%</span><p class="text-xs text-gray-500 mt-1">VC Governance</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 2: Islamic Finance -->
+  <section class="bg-gray-50 py-16 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 02</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Islamic Finance Hub Roadmap — ME Government Organization</h2>
+          <div class="space-y-5">
+            <div class="bg-white rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Prepare a strategic roadmap for a Middle Eastern country to become a regional Islamic finance hub.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Task</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Deep dive into regional and global Islamic finance landscape — identifying growth areas, low-hanging opportunities, best practices and innovative products</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Detailed study of the Malaysian Islamic finance sector as a benchmark, plus competitive analysis with GCC countries</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Legal frameworks assessment and identification of regulatory best practices from leading Islamic finance jurisdictions</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Preparation of a multi-year strategic roadmap with clearly outlined priorities, phased initiatives, and KPIs</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Objectives Achieved</p>
+              <p class="text-gray-700 text-sm leading-relaxed">The client built legal frameworks and strategic initiatives based on the recommendations. The roadmap served as the foundational document for the country's Islamic finance development agenda.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Islamic Finance Middle East" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Strategic Consulting</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Financial Services</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Government</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 3: HK/China Bank -->
+  <section class="bg-white py-16 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Merchant Acquisition Banking" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Financial Services</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Payments</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Hong Kong / China</span>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 03</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Bank Entry into HK &amp; China Merchant Acquisition Sector</h2>
+          <div class="space-y-5">
+            <div class="bg-gray-50 rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Advise a leading bank on optimal modes of entry into Hong Kong and China's merchant acquisition sector.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Task</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Current payment landscape assessment — market economics, usage of cards/cash/checks, domestic payment schemes</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Emerging payment landscape — maturity spectrum of Payment Service Providers (PSP), contactless payments, OEM and proprietary wallets</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Payments value chain analysis — profiles of various types of merchant acquirers including network strength, POS terminal presence, e-commerce, 3/4 party models</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Key recent initiatives by leading players and identification of whitespace in the merchant acquisition market</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Objectives Achieved</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Recommended Hong Kong as an attractive market to enter for merchant acquisition owing to its relatively nascent market, lower competitive intensity, and strong regulatory environment for fintech innovation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 4: Qatar Education -->
+  <section class="bg-gray-50 py-16 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 04</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Qatar Education Sector Investment — Big 4 Client</h2>
+          <div class="space-y-5">
+            <div class="bg-white rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Identify the most attractive investment opportunity in Qatar's education sector for a Big 4 client.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Task</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Deep dive into Qatar's education sector — identifying growth areas, challenges, competitive environment, and favorable government policies</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Complete value chain analysis covering K-12 schools, tertiary institutes, vocational training institutes, transportation, and school canteen sub-sectors</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Quantitative rating model for international K-12 schools incorporating expected cost escalations, revenue potential, and competitive factors</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Recommended a concrete investment opportunity with detailed rationale covering financials, market positioning, and growth potential</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Objectives Achieved</p>
+              <p class="text-gray-700 text-sm leading-relaxed"><strong>The end client invested a substantial amount in a leading education institute within three months</strong> of receiving our recommendations — a testament to the actionability and quality of our analysis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Qatar Education" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Opportunity Assessment</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Education</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Big 4 Client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 5: Mining Technology -->
+  <section class="bg-white py-16 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Mining Technology" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Technology Benchmarking</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Mining</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">US Innovation Firm</span>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 05</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Mining Technology Gap Analysis — US-Based Innovation Consultancy</h2>
+          <div class="space-y-5">
+            <div class="bg-gray-50 rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Identify technology gaps for a world-leading US mining company — mapping the innovation landscape and pinpointing investment priorities.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Task</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Comprehensive scan through secondary research sources — news, academic publications, company reports, research institute programs, and patent filings</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Identification of leading technological breakthroughs in the mining sector including automation, AI, IoT, and green mining</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Expert interviews with mining industry specialists to gain insight into technological innovation and the future of mining</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Exhaustive presentation outlining prevailing technological trends, future of mining, competitive landscape, and identified innovation gaps</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Objectives Achieved</p>
+              <p class="text-gray-700 text-sm leading-relaxed">The end client identified priority areas for technological investments and created a long-term R&amp;D roadmap based on the innovation gap analysis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study 6: Sports Medicine Europe -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-3">
+          <p class="text-vc-blue text-xs font-semibold uppercase tracking-widest mb-2">Case Study 06</p>
+          <h2 class="text-gray-800 font-bold text-2xl leading-tight mb-4">Sports Medicine Centre Location &amp; Feasibility — ME Health Authority</h2>
+          <div class="space-y-5">
+            <div class="bg-white rounded-lg p-4 border-l-4" style="border-color:#008aff;">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Client Ask</p>
+              <p class="text-gray-700 text-sm leading-relaxed">Location assessment and feasibility study for a Middle Eastern-based health authority looking to establish sports medicine centre(s) in Europe.</p>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Our Task</p>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Divided the study into three stages to identify the right country using a selection-rejection criteria covering both quantitative and qualitative analysis</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Conducted 20+ expert interviews with sports medicine SMEs alongside extensive secondary research across five markets</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Five leading European markets assessed: Spain, UK, Germany, France, and Netherlands</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Analyzed: sports economy &amp; infrastructure, sports medicine industry, financial investment climate, demand-supply gap, regulatory benefits, workforce availability, and ease of doing business</li>
+                <li class="flex gap-2 text-sm text-gray-600"><span style="color:#008aff;">▸</span>Final market recommendation with financial feasibility and phased implementation roadmap</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+              <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Objectives Achieved</p>
+              <p class="text-gray-700 text-sm leading-relaxed">The client appreciated the highly methodical approach and is at the preliminary stage of establishing their sports medicine centre in the recommended European market.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=380&fit=crop&crop=entropy&auto=format&q=80" alt="Sports Medicine Healthcare" class="w-full rounded-lg shadow-md object-cover" style="height:280px;" />
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Location Assessment</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Healthcare</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded" style="background:#e8f4ff; color:#008aff;">Europe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14" style="background:linear-gradient(135deg,#0d1828 0%,#0f2d5e 50%,#1a4080 100%);">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-white font-bold text-2xl mb-3">Start Your Project with ValuConsult</h2>
+      <p class="text-blue-200 text-sm mb-6">Avail our one-week free pilot offer. Experience our quality first-hand — no commitment required.</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="contact.html" class="bg-vc-blue text-white font-semibold px-8 py-3 rounded hover:bg-blue-600 transition text-sm">Get Started</a>
+        <a href="services.html" class="border border-blue-400 text-blue-200 font-semibold px-8 py-3 rounded hover:bg-blue-900 transition text-sm">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 pt-10 pb-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded flex items-center justify-center" style="background:#008aff;"><span class="text-white font-black text-xs">VC</span></div>
+            <span class="text-white font-bold">Valu<span style="color:#008aff;">Consult</span></span>
+          </div>
+          <p class="text-xs leading-relaxed">Foster better business decisions through bespoke Consulting, Strategy and Financial Research.</p>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Services</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="services.html#business-research" class="hover:text-white transition">Business Research</a></li>
+            <li><a href="services.html#financial-research" class="hover:text-white transition">Financial Research</a></li>
+            <li><a href="services.html#economic-research" class="hover:text-white transition">Economic Research</a></li>
+            <li><a href="services.html#transaction" class="hover:text-white transition">Transaction Advisory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Company</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="case-studies.html" class="hover:text-white transition">Case Studies</a></li>
+            <li><a href="insights.html" class="hover:text-white transition">Insights</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-xs font-semibold uppercase tracking-wide mb-3">Contact</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="mailto:vikas@valuconsult.com" class="hover:text-white transition">vikas@valuconsult.com</a></li>
+            <li><a href="mailto:gop@valuconsult.com" class="hover:text-white transition">gop@valuconsult.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 flex flex-col md:flex-row items-center justify-between gap-2">
+        <p class="text-xs">© 2024 ValuConsult. All rights reserved.</p>
+        <p class="text-xs">Mumbai | Indore | Vadodara, India</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
